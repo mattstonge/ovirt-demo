@@ -7,7 +7,7 @@
         - path: /var/lib/libvirt/images
           size: 20480
       virt_guest_networks:
-        - virbr0
+        - default
       virt_guest_iso: /home/mstonge/Downloads/rhel-server-7.5-x86_64-dvd.iso
 
     roles:
