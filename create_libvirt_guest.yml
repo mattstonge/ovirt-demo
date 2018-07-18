@@ -9,6 +9,6 @@
       virt_guest_networks:
         - virbr0
       virt_guest_iso: /home/mstonge/Downloads/rhel-server-7.5-x86_64-dvd.iso
+
     roles:
-      - { role: ansible_role-virt_guest-master, dir: '/etc/ansible/roles' }
-      
+      - { role: '/etc/ansible/roles/ansible-role-virt_guest-master' }
