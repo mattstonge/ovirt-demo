@@ -1,0 +1,12 @@
+---
+  - name: Matt's  VIRSH Autostart playbook
+    hosts: hypervisors
+
+    tasks:
+
+      - name: autostart | list domains
+        command: virsh list --autostart --name
+        register: libvirt_list_autostart_result
+
+      - debug:
+          var: libvirt_list_autostart_result.stdout

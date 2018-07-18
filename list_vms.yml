@@ -1,0 +1,24 @@
+---
+- name: List VMs
+  hosts: hypervisors
+
+  tasks:
+
+    - name: Get DOWN VM List
+      virt:
+        command:  list_vms
+        state: shutdown
+      register: list_down_vms_result
+
+    - debug:
+        var: list_down_vms_result
+
+
+    - name: Get RUNNING VM List
+      virt:
+        command:  list_vms
+        state: running
+      register: list_running_vms_result
+
+    - debug:
+        var: list_running_vms_result

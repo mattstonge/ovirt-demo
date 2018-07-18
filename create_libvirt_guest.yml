@@ -1,0 +1,13 @@
+---
+  - name:  Create Libvirt Guest
+    hosts: hypervisors
+    vars:
+      virt_guest_name:  vm1
+      virt_guest_disks:
+        - path: /var/lib/libvirt/images
+          size: 20480
+      virt_guest_networks:
+        - virbr0
+      virt_guest_iso: /home/mstonge/Downloads/rhel-server-7.5-x86_64-dvd.iso
+    roles:
+      - ansible_role-virt_guest-master

@@ -1,2 +1,2 @@
 # ovirt-demo
-repo of ansible playbooks to demo management KVM and RHV
+A group of playbooks to manage open source virtualization

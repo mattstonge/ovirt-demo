@@ -1,0 +1,17 @@
+---
+- name: Status Checker
+  hosts: hypervisors
+
+
+  tasks:
+
+    - name: KVM Node Info Details
+      virt:
+        command: nodeinfo
+      tags: nodeinfo
+
+    - name: Check status of VM(s)
+      virt:
+        command: status
+        name: rhel75test
+      tags: status

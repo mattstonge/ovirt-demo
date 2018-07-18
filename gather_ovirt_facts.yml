@@ -1,0 +1,13 @@
+---
+  - name: Gather facts about all clusters
+    hosts: localhost
+    connection: local
+
+    tasks:
+    - name: Gather Facts
+      ovirt_cluster_facts:
+        pattern:
+          name: 'Matt-Demo'
+
+    - debug:
+        var: ovirt_clusters
